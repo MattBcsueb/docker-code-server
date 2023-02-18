@@ -15,6 +15,8 @@ RUN \
   echo "**** install runtime dependencies ****" && \
   apt-get update && \
   apt-get install -y \
+    npm \
+    nodejs \
     git \
     jq \
     libatomic1 \
@@ -22,8 +24,6 @@ RUN \
     net-tools \
     netcat \
     sudo && \
-    npm \
-    nodejs \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
     CODE_RELEASE=$(curl -sX GET https://api.github.com/repos/coder/code-server/releases/latest \

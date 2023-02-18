@@ -22,6 +22,8 @@ RUN \
     net-tools \
     netcat \
     sudo && \
+    npm \
+    nodejs \
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
     CODE_RELEASE=$(curl -sX GET https://api.github.com/repos/coder/code-server/releases/latest \
@@ -40,11 +42,6 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
-  apt install npm \
-  apt install nodejs \
-  npm install -g n \
-  n stable \
-  hash -r \
 # add local files
 COPY /root /
 

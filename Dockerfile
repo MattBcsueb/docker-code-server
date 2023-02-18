@@ -15,8 +15,6 @@ RUN \
   echo "**** install runtime dependencies ****" && \
   apt-get update && \
   apt-get install -y \
-    npm \
-    nodejs \
     git \
     jq \
     libatomic1 \

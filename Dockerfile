@@ -40,7 +40,11 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
-
+  apt install npm \
+  apt install nodejs \
+  npm install -g n \
+  n stable \
+  hash -r \
 # add local files
 COPY /root /
 
